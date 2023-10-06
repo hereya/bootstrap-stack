@@ -37,6 +37,12 @@ export class HereyaBootstrapStack extends cdk.Stack {
                 version: '0.2',
                 env: {
                     shell: 'bash',
+                    variables: {
+                        REPO_URL: "",
+                        WORKSPACE: "",
+                        PROJECT: "",
+                        NAME: "", // name of the module or package
+                    }
                 },
                 phases: {
                     install: {
@@ -44,17 +50,19 @@ export class HereyaBootstrapStack extends cdk.Stack {
                             nodejs: '18.x',
                         },
                         commands: [
-                            'echo "TODO: install hereya cli here"',
+                            'npm install -g @hereya/cli',
                         ],
                     },
                     pre_build: {
                         commands: [
-                            'echo "TODO: clone package repo here and check input parameters"',
+                            'git clone $REPO_URL source-code/',
                         ],
                     },
                     build: {
                         commands: [
-                            'echo "TODO: go to package folder and run hereya aws deploy here"',
+                            'cd source-code',
+                            'npm install',
+                            'hereya cdk exec $NAME -w $WORKSPACE -p $PROJECT'
                         ],
                     },
                 },
