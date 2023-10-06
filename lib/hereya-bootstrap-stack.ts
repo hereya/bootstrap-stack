@@ -39,7 +39,8 @@ export class HereyaBootstrapStack extends cdk.Stack {
                     shell: 'bash',
                     variables: {
                         REPO_URL: "",
-                        WORKSPACE: "",
+                        HEREYA_WORKSPACE: "",
+                        HEREYA_PROJECT: "",
                         NAME: "", // name of the module or package
                     }
                 },
@@ -61,7 +62,7 @@ export class HereyaBootstrapStack extends cdk.Stack {
                         commands: [
                             'cd source-code',
                             'npm install',
-                            'hereya cdk exec $NAME -w $WORKSPACE'
+                            'hereya cdk exec $NAME',
                         ],
                     },
                 },
