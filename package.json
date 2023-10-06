@@ -1,8 +1,8 @@
 {
-  "name": "hereya-bootstrap-stack",
+  "name": "hereya-bootstrap",
   "version": "0.1.0",
   "bin": {
-    "hereya-bootstrap-stack": "bin/hereya-bootstrap-stack.js"
+    "hereya-bootstrap": "bin/hereya-bootstrap.js"
   },
   "scripts": {
     "build": "tsc",

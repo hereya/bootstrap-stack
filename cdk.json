@@ -1,5 +1,5 @@
 {
-  "app": "npx ts-node --prefer-ts-exts bin/hereya-bootstrap-stack.ts",
+  "app": "npx ts-node --prefer-ts-exts bin/hereya-bootstrap.ts",
   "watch": {
     "include": [
       "**"
