@@ -1,6 +1,7 @@
-# Welcome to your CDK TypeScript project
+# Welcome to Hereya Bootstrap Stack project
 
-This is a blank project for CDK development with TypeScript.
+This is a CDK project for creating AWS resources for use with [hereya](https://github.com/hereya/cli).
+This stack is intended to be deployed once per AWS account and region.
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
